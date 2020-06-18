@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SystemOD.klient"
+             Title="Strona Klienta">
+  
+
+      <StackLayout >
+            <Button Text="Dodaj zamówienia" Clicked="dz"  HorizontalOptions="Center" BorderColor="#FF0101" BackgroundColor="#48FC05" FontAttributes="Bold" FontFamily="" FontSize="Micro" />
+            <Button Text="Historia zamówień" Clicked="hz"  HorizontalOptions="Center" BorderColor="#FF0101" BackgroundColor="#48FC05" FontAttributes="Bold" FontFamily="" FontSize="Micro" />
+            <Button Text="Cennik" Clicked="ce"  HorizontalOptions="Center" BorderColor="#FF0101" BackgroundColor="#48FC05" FontAttributes="Bold" FontFamily="" FontSize="Micro" />
+        
+
+
+
+        <ContentView x:Name="popup"  Padding="10, 0" IsVisible="False" >
+            <ScrollView>
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                    <StackLayout Orientation="Vertical" HeightRequest="3600" WidthRequest="300" >
+                            <Picker x:Name="picc" Title="produkt"></Picker>
+                        <Entry x:Name="il" Placeholder="ilosc" HorizontalOptions="Fill" HorizontalTextAlignment="Start" BackgroundColor="#A7A7A7" PlaceholderColor="#000000" TextColor="#010101"  />
+                            <Button Text="Zatwierdz" Clicked="zat2" TextColor="#000000" HorizontalOptions="Fill" BorderColor="#FF0101" BackgroundColor="AliceBlue" FontAttributes="Bold" FontFamily="" FontSize="Micro" VerticalOptions="Start" Scale="1"/>
+                        
+                       
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </ContentView>
+            
+        <ScrollView>
+            <ContentView x:Name="popup2"  Padding="10, 0" IsVisible="False" >
+                <ListView x:Name="ListViewResult" HasUnevenRows="True" IsEnabled="False">
+                    <ListView.Header>
+                        <Grid >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*" />
+                                <ColumnDefinition Width="4*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Nazwa" BackgroundColor="White" FontAttributes="Bold" FontSize="Medium" TextColor="Black" VerticalTextAlignment="Center" Grid.Column="0" Grid.Row="0"/>
+                            <Label Text="Ilosc" BackgroundColor="White" FontAttributes="Bold" FontSize="Medium" TextColor="Black" VerticalTextAlignment="Center" Grid.Column="1" Grid.Row="0" />
+                            
+                        </Grid>
+                    </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.View>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1*" />
+                                            <ColumnDefinition Width="4*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+                                        <Label Grid.Column="0" Text="{Binding Nazwa}"/>
+                                        <Label Grid.Column="1" Text="{Binding ilosc}"/>
+
+                                    </Grid>
+                                </ViewCell.View>
+
+
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                
+            </ContentView>
+        </ScrollView>
+        <ScrollView>
+            <ContentView x:Name="popup3"  Padding="10, 0" IsVisible="False" >
+                <ListView x:Name="ListViewResult2" HasUnevenRows="True" IsEnabled="False">
+                    <ListView.Header>
+                        <Grid >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*" />
+                                <ColumnDefinition Width="2*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Nazwa" BackgroundColor="White" FontAttributes="Bold" FontSize="Medium" TextColor="Black" VerticalTextAlignment="Center" Grid.Column="0" Grid.Row="0"/>
+                            <Label Text="cena" BackgroundColor="White" FontAttributes="Bold" FontSize="Medium" TextColor="Black" VerticalTextAlignment="Center" Grid.Column="1" Grid.Row="0" />
+                            
+                        </Grid>
+                    </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.View>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1*" />
+                                            <ColumnDefinition Width="2*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+                                        <Label Grid.Column="0" Text="{Binding Nazwa}"/>
+                                        <Label Grid.Column="1" Text="{Binding Cena}"/>
+                                        
+                                    </Grid>
+                                </ViewCell.View>
+                                   
+                               
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                
+            </ContentView>
+        </ScrollView>
+
+
+
+
+       <Button Text="Wyjdz" Clicked="sk" TextColor="#000000" HorizontalOptions="Fill" BorderColor="#FF0101" BackgroundColor="AliceBlue" FontAttributes="Bold" FontFamily="" FontSize="Micro" VerticalOptions="Start" Scale="1"/>
+    </StackLayout>
+    
+    
+    
+  
+</ContentPage>

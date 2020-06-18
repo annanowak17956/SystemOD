@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SystemOD.MainPage"
+             Title="System Optymalnej Dystrybucji">
+
+    <StackLayout>
+        <Button Text="Strona klienta" Clicked="sk"  TextColor="#000000" HorizontalOptions="Fill" BorderColor="#FF0101" BackgroundColor="Pink" FontAttributes="Bold" FontFamily="" FontSize="Micro" VerticalOptions="Start" ContentLayout="Left,20" FlowDirection="MatchParent" IsEnabled="True" IsTabStop="True" IsVisible="True" Scale="1" />
+        <Button Text="Strona firmy" Clicked="sf"  TextColor="#000000" HorizontalOptions="Fill" BorderColor="#FF0101" BackgroundColor="Pink" FontAttributes="Bold" FontFamily="" FontSize="Micro" VerticalOptions="Start" ContentLayout="Left,20" FlowDirection="MatchParent" IsEnabled="True" IsTabStop="True" IsVisible="True" Scale="1" />
+               
+        
+    </StackLayout>
+
+</ContentPage>

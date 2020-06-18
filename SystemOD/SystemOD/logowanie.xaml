@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SystemOD.Logowanie"
+             Title="System Optymalnej Dystrybucji">
+
+    <StackLayout>
+        <Button Text="Logowanie" Clicked="logo"  TextColor="#000000" HorizontalOptions="Fill" BorderColor="#FF0101" BackgroundColor="AliceBlue" FontAttributes="Bold" FontFamily="" FontSize="Micro" VerticalOptions="Start" ContentLayout="Left,20" FlowDirection="MatchParent" IsEnabled="True" IsTabStop="True" IsVisible="True" Scale="1" />
+        <Button Text="Rejestracja" Clicked="rej"  TextColor="#000000" HorizontalOptions="Fill" BorderColor="#FF0101" BackgroundColor="AliceBlue" FontAttributes="Bold" FontFamily="" FontSize="Micro" VerticalOptions="Start" ContentLayout="Left,20" FlowDirection="MatchParent" IsEnabled="True" IsTabStop="True" IsVisible="True" Scale="1" />
+
+
+        <ContentView x:Name="popup2"  Padding="10, 0" IsVisible="False" >
+            <ScrollView>
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                    <StackLayout Orientation="Vertical" HeightRequest="200" WidthRequest="300" >
+                        <Entry x:Name="Email" Placeholder="email" HorizontalOptions="Fill" HorizontalTextAlignment="Start" BackgroundColor="#A7A7A7" PlaceholderColor="#000000" TextColor="#010101"  />
+                        <Entry x:Name="Hasło" IsPassword="True" Placeholder="hasło" HorizontalOptions="Fill" HorizontalTextAlignment="Start" BackgroundColor="#A7A7A7" PlaceholderColor="#000000" TextColor="#010101" />
+                        <Button Text="Login" Clicked="log" TextColor="#000000" HorizontalOptions="Fill" BorderColor="#FF0101" BackgroundColor="AliceBlue" FontAttributes="Bold" FontFamily="" FontSize="Micro" VerticalOptions="Start" Scale="1"/>
+                        <Button Text="Wyjście" Clicked="Wy1" TextColor="#000000" HorizontalOptions="Fill" BorderColor="#FF0101" BackgroundColor="AliceBlue" FontAttributes="Bold" FontFamily="" FontSize="Micro" VerticalOptions="Start" Scale="1"/>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </ContentView>
+        <ContentView x:Name="popup"  Padding="10, 0" IsVisible="False" >
+            <ScrollView>
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                    <StackLayout Orientation="Vertical" HeightRequest="3200" WidthRequest="300" >
+
+                        <Entry x:Name="email" Placeholder="email" HorizontalOptions="Fill" HorizontalTextAlignment="Start" BackgroundColor="#A7A7A7" PlaceholderColor="#000000" TextColor="#010101"  />
+                        <Entry x:Name="hasło" IsPassword="True" Placeholder="hasło" HorizontalOptions="Fill" HorizontalTextAlignment="Start" BackgroundColor="#A7A7A7" PlaceholderColor="#000000" TextColor="#010101" />
+                        <Entry x:Name="Ulica" Placeholder="Ulica" HorizontalOptions="Fill" HorizontalTextAlignment="Start" BackgroundColor="#A7A7A7" PlaceholderColor="#000000" TextColor="#010101"  />
+                        <Entry x:Name="Nrdomu" Placeholder="Nrdomu" HorizontalOptions="Fill" HorizontalTextAlignment="Start" BackgroundColor="#A7A7A7" PlaceholderColor="#000000" TextColor="#010101"  />
+                        <Entry x:Name="Kod" Placeholder="Kod" HorizontalOptions="Fill" HorizontalTextAlignment="Start" BackgroundColor="#A7A7A7" PlaceholderColor="#000000" TextColor="#010101"  />
+                        <Entry x:Name="Poczta" Placeholder="Poczta" HorizontalOptions="Fill" HorizontalTextAlignment="Start" BackgroundColor="#A7A7A7" PlaceholderColor="#000000" TextColor="#010101"  />
+                        <Button Text="Rejestracja" Clicked="rejestracja"  HorizontalOptions="Center" BorderColor="#FF0101" BackgroundColor="#48FC05" FontAttributes="Bold" FontFamily="" FontSize="Micro" />
+                        <Button Text="Wyjscie" Clicked="wy" TextColor="#000000" HorizontalOptions="Fill" BorderColor="#FF0101" BackgroundColor="AliceBlue" FontAttributes="Bold" FontFamily="" FontSize="Micro" VerticalOptions="Start" Scale="1"/>
+                        <Label x:Name="autoryzac" TextColor="#FF0000" Visual="Material" TextDecorations="Underline" HorizontalOptions="Center" FontAttributes="Bold" />
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </ContentView>
+    </StackLayout>
+  
+</ContentPage>
